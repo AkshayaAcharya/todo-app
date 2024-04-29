@@ -1,0 +1,153 @@
+:root {
+  --clr-primary: #f08c00;
+  --clr-secondary: #fcc419;
+  --clr-tertiary: #fff9db;
+
+  --clr-text-white: #fff;
+  --clr-text-dark: #000;
+  --clr-text-gray: #d7cdcd;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 2.4rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+  width: 50rem;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.header {
+  background-color: var(--clr-primary);
+  color: var(--clr-text-white);
+  text-align: center;
+  padding: 1.2rem;
+  border-radius: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.header img {
+  width: 4rem;
+}
+
+.header span {
+  display: inline-block;
+  align-self: center;
+}
+.input-container {
+  padding: 0.8rem;
+  background-color: var(--clr-tertiary);
+  border-radius: 1rem;
+  border: 0.1rem solid var(--clr-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  background-color: var(--clr-tertiary);
+  font-size: 1.6rem;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input-container:focus-within {
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.todo-container {
+  background-color: var(--clr-primary);
+  padding: 2.4rem;
+  border-radius: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.todo {
+  background-color: var(--clr-tertiary);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--clr-text-dark);
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: 5rem 1fr 5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task {
+  display: inline-block;
+  align-self: flex-start;
+  font-weight: 500;
+}
+
+.del {
+  width: 2rem;
+  justify-self: end;
+  cursor: pointer;
+}
+
+.del:hover {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.done {
+  background-color: #fcc419;
+}
+
+.btn {
+  background-color: var(--clr-primary);
+  width: 2rem;
+  height: 2rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  font-weight: 900;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+}
